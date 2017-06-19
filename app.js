@@ -2,8 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
   messageCacheMaxSize: 10,
   messageCacheLifetime: 480,
-  messageSweepInterval: 120,
-  disabledEvents: ["TYPING_START", "VOICE_STATE_UPDATE"]
+  messageSweepInterval: 120
 });
 const fs = require("fs");
 const config = require("./config.json");
