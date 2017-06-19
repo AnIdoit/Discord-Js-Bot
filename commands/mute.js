@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', config.moderation.log);
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', config.moderation.muteRole);
-  if (!modlog) return message.reply(`${message.user.username}, I cannot find a ${config.moderation.log} channel`);
+  if (!modlog) return message.send(`${message.user.username}, I cannot find a ${config.moderation.log} channel`);
   if (!muteRole) return message.send(`${message.user.username}, I cannot find a mute role`);
   if (reason.length < 1) return message.send(`${message.user.username}, You must supply a reason for the mute`)
   if (message.mentions.users.size < 1) return message.send(`${message.user.username}, You must mention someone to mute them`)
@@ -24,5 +24,4 @@ exports.run = (client, message, args) => {
       client.channels.get(modlog.id).send({embed}).catch(console.error);
     });
   }
-
 };

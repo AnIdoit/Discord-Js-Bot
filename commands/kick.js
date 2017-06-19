@@ -1,22 +1,19 @@
+const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let config = require("../config.json");
-  let mod = message.guild.roles.find("name", config.moderation.modrole);
-  let admin = message.guild.roles.find("name", config.moderation.adminrole);
+  let reason = args.slice(1).join(' ');
+  let user = message.mentions.users.first();
+  let modlog = client.channels.find('name', config.moderation.log);
+  if (!modlog) return message.send(`${message.user.username}, I cannot find a ${config.moderation.log} channel`);
+  if (reason.length < 1) return message.send(`${message.user.username}, You must supply a reason for the kick.`);
+  if (message.mentions.users.size < 1) return message.send(`${message.user.username}, You must mention someone to kick them.`)
 
-  if (!(message.member.roles.has(mod.id) || message.member.roles.has(admin.id) || message.author.id === config.owner.id)) {
-    return message.channel.send(`${message.user.username}, You don't have the permission to use this command.`);
-  };
-  if (message.mentions.users.size === 0) {
-    return message.channel.send(`${message.user.username}, please mention a user to kick`);
-  };
-  let kickMember = message.guild.member(message.mentions.users.first());
-  if (!kickMember) {
-    return message.channel.send(`${message.user.username}, that user does not seem valid`);
-  };
-  if (!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
-    return message.channel.send(`${message.user.username}, I don't have the permissions (KICK_MEMBER) to do this.`);
-  };
-  kickMember.kick().then(member => {
-    message.channel.send(`${message.user.username}, ${member.user.username} was succesfully kicked.`);
-  }).catch(console.error)
+  //if (!message.guild.member(user).kickable) return message.send(`${message.user.username}, I cannot kick that member`);
+  message.guild.member(user).kick();
+
+  const embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setTimestamp()
+    .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+  return client.channels.get(modlog.id).send({embed});
 };
