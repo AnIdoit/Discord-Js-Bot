@@ -1,7 +1,8 @@
 # Discord-Js-Bot
 The Discord bot I'm writing in JavaScript(Discord.js)
+[My Discord](https://discord.gg/XYySGKz)
 
-#### Commands
+### Commands
 - owner
   - guildleave
   - say
