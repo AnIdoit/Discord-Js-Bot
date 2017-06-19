@@ -1,6 +1,7 @@
 # Discord-Js-Bot
-The Discord bot I'm writing in JavaScript(Discord.js)\n
-Join my [discord](https://discord.gg/XYySGKz)
+The Discord bot I'm writing in JavaScript(Discord.js)
+
+[Join my discord](https://discord.gg/XYySGKz)
 
 - dependencies
   - "discord.js": "^11.1.0"
