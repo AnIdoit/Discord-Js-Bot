@@ -1,9 +1,10 @@
 # Discord-Js-Bot
 The Discord bot I'm writing in JavaScript(Discord.js)
-[My Discord](https://discord.gg/XYySGKz)
+
+[Join my discord](https://discord.gg/XYySGKz)
 
 - dependencies
-    - "discord.js": "^11.1.0"
+  - "discord.js": "^11.1.0"
 
 ### Commands
 - owner(isn't listed in the help command)
