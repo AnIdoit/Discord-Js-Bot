@@ -2,18 +2,18 @@
 The Discord bot I'm writing in JavaScript(Discord.js)
 
 ## Commands
--owner
-  -guildleave
-  -say
+- owner
+  - guildleave
+  - say
 
--moderators
-  -ban
-  -kick
-  -mute
+- moderators
+  - ban
+  - kick
+  - mute
 
--others
-  -useful
-    -help
-    -guildinfo
-  -less useful
-    -ping
+- others
+  - useful
+    - help
+    - guildinfo
+  - less useful
+    - ping
