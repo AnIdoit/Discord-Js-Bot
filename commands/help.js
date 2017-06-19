@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
 
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
-    .setFooter('Bot by: Aubry#4221')
+    .setFooter(`Bot by: ${config.owner.username}`)
     .setThumbnail(client.user.avatarURL)
     .addField('----Normal User----', 'ping - responds pong\nguildinfo - info on current guild \n')
     .addField('----Mod----', 'kick - kicks mentioned user \n')
