@@ -2,8 +2,11 @@
 The Discord bot I'm writing in JavaScript(Discord.js)
 [My Discord](https://discord.gg/XYySGKz)
 
+## - dependencies
+    - "discord.js": "^11.1.0"
+
 ### Commands
-- owner
+- owner(isn't listed in the help command)
   - guildleave
   - say
 

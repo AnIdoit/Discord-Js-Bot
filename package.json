@@ -1,0 +1,16 @@
+{
+  "name": "Tutorial-Bot",
+  "version": "1.2.5",
+  "description": "An Idiot's Guide tutorial Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "An Idiot's Guide",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "moment": "^2.18.1",
+    "ms": "^2.0.0"
+  }
+};

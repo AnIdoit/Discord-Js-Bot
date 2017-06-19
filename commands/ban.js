@@ -4,10 +4,12 @@ exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', config.moderation.logs);
+
   if (!modlog) return message.send(`${message.user.username}, I cannot find a mod-log channel`);
   if (reason.length < 1) return message.send(`${message.user.username}, You must supply a reason for the ban.`);
-  if (message.mentions.users.size < 1) return message.send(`${message.user.username}, You must mention someone to ban them.`).catch(console.error);
+  if (message.mentions.users.size < 1) return message.send(`${message.user.username}, You must mention someone to ban them.`);
   if (!message.guild.member(user).bannable) return message.send(`${message.user.username}, I cannot ban that member`);
+  
   message.guild.ban(user, 2);
 
   const embed = new Discord.RichEmbed()

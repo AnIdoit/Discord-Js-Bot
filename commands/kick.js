@@ -4,12 +4,13 @@ exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', config.moderation.log);
+
   if (!modlog) return message.send(`${message.user.username}, I cannot find a ${config.moderation.log} channel`);
   if (reason.length < 1) return message.send(`${message.user.username}, You must supply a reason for the kick.`);
   if (message.mentions.users.size < 1) return message.send(`${message.user.username}, You must mention someone to kick them.`)
+  if (!message.guild.member(user).kickable) return message.send(`${message.user.username}, I cannot kick that member`);
 
-  //if (!message.guild.member(user).kickable) return message.send(`${message.user.username}, I cannot kick that member`);
-  message.guild.member(user).kick();
+ message.guild.member(user).kick();
 
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)

@@ -14,5 +14,6 @@ exports.run = (client, message, args) => {
     .addField('Member Count', message.guild.memberCount)
     .addField("verification level", message.guild.verificationLevel)
     .addField("guild region", message.guild.region);
+    
     message.channel.send('', {embed} );
 };
