@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
   if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
     return message.channel.send(`${message.author.username}, I don't have the permissions (BAN_MEMBER) to do this.`);
   };
-  kickMember.kick().then(member => {
+  kickMember.ban().then(member => {
     message.channel.send(`${message.author.username}, ${member.user.username} was succesfully banned.`);
   }).catch(console.error)
 };
