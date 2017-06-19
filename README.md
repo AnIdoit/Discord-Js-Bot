@@ -1,5 +1,5 @@
 # Discord-Js-Bot
-The Discord bot I'm writing in JavaScript(Discord.js)
+The Discord bot I'm writing in JavaScript(Discord.js)\n
 Join my [discord](https://discord.gg/XYySGKz)
 
 - dependencies
