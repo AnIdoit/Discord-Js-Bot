@@ -6,12 +6,14 @@
 
   "owner": {
     "username": "YOUR_USERNAME",
-    "id": "YOUR_ID",
+    "userid": "YOUR_ID",
   },
 
   "moderation": {
     "adminrole": "SERVER_ADMIN_ROLE",
     "modrole": "SERVER_MOD_ROLE",
+    "muterole": "SERVER_MUTE_ROLE",
+    "logs": "SERVER_LOGS"
   },
 
   "join": {
