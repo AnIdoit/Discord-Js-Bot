@@ -1,5 +1,21 @@
 {
-  "token": "YOUR_BOT_TOKEN",
-  "prefix": "PREFIX",
-  "ownerid": "YOUR_ID"
+  "bot": {
+    "token": "YOUR_BOT_TOKEN",
+    "prefix": "PREFIX",
+  },
+
+  "owner": {
+    "username": "YOUR_USERNAME",
+    "id": "YOUR_ID",
+  },
+
+  "moderation": {
+    "adminrole": "SERVER_ADMIN_ROLE",
+    "modrole": "SERVER_MOD_ROLE",
+  },
+
+  "join": {
+    "role": "ROLE_GIVEN_ON_JOIN",
+    "channel" : "CHANNEL_TO_MESSAGE_ON_JOIN",
+  }
 }

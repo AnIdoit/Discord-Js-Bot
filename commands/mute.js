@@ -1,10 +1,10 @@
 var Discord = require("discord.js")
 exports.run = (client, message, args) => {
   let config = require("../config.json");
-  let mod = message.guild.roles.find("name", "Freeze-Mod");
-  let admin = message.guild.roles.find("name", "Freeze-Admin");
+  let mod = message.guild.roles.find("name", config.moderation.modrole);
+  let admin = message.guild.roles.find("name", config.moderation.adminrole);
 
-  if (!(message.member.roles.has(mod.id) || message.member.roles.has(admin.id) || message.author.id === config.ownerid)) return;
+  if (!(message.member.roles.has(mod.id) || message.member.roles.has(admin.id) || message.author.id === config.owner.id)) return;
     let user = message.mentions.users.first();
     let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'muted');
     if (!muteRole) return message.reply('I cannot find a mute role');

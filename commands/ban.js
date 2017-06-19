@@ -1,8 +1,8 @@
 exports.run = (client, message, args) => {
-  let admin = message.guild.roles.find("name", "Freeze-Admin");
   let config = require("../config.json");
+  let admin = message.guild.roles.find("name", config.moderation.adminrole);
 
-  if (!(message.member.roles.has(admin.id) || message.author.id === config.ownerid)) {
+  if (!(message.member.roles.has(admin.id) || message.author.id === config.owner.id)) {
     return message.channel.send(`${message.user.username}, you don't have the permission to use this command.`);
   };
   if (message.mentions.users.size < 1) {

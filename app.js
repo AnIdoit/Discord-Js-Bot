@@ -1,8 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({
-  messageCacheMaxSize: 10,
-  messageCacheLifetime: 480,
-  messageSweepInterval: 120
 });
 const fs = require("fs");
 const config = require("./config.json");
@@ -18,10 +15,10 @@ fs.readdir("./events/", (err, files) => {
 
 client.on("message", message => {
   if (message.author.bot) return;
-  if (!message.content.startsWith(config.prefix)) return;
+  if (!message.content.startsWith(config.bot.prefix)) return;
 
   const args = message.content.split(" ");
-  const command = args.shift().slice(config.prefix.length);
+  const command = args.shift().slice(config.bot.prefix.length);
 
   try {
     let commandFile = require(`./commands/${command}.js`);
@@ -31,4 +28,4 @@ client.on("message", message => {
   }
 });
 
-client.login(config.token)
+client.login(config.bot.token)

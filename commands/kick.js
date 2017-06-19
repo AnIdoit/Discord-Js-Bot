@@ -1,9 +1,9 @@
 exports.run = (client, message, args) => {
-  let mod = message.guild.roles.find("name", "Freeze-Mod");
-  let admin = message.guild.roles.find("name", "Freeze-Admin");
   let config = require("../config.json");
+  let mod = message.guild.roles.find("name", config.moderation.modrole);
+  let admin = message.guild.roles.find("name", config.moderation.adminrole);
 
-  if (!(message.member.roles.has(mod.id) || message.member.roles.has(admin.id) || message.author.id === config.ownerid)) {
+  if (!(message.member.roles.has(mod.id) || message.member.roles.has(admin.id) || message.author.id === config.owner.id)) {
     return message.channel.send(`${message.user.username}, You don't have the permission to use this command.`);
   };
   if (message.mentions.users.size === 0) {
