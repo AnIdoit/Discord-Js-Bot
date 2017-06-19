@@ -4,9 +4,13 @@ exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', config.moderation.log);
-  let muteRole = client.guilds.get(message.guild.id).roles.find('name', config.moderation.muteRole);
+  let muteRole = client.guilds.get(message.guild.id).roles.find('name', config.moderation.muterole);
+  let modRole = message.guild.roles.find("name", config.moderation.modrole);
+  let adminRole = message.guild.roles.find("name", config.moderation.adminrole);
 
-  if (!(message.author.roles.has))
+  if (!(message.member.roles.has(modRole.id) || message.member.roles.has(adminRole.id) || message.author.id === config.owner.userid)) {
+    message.send(`${message.user.username}, You don't have permission`);
+  };
   if (!modlog) return message.send(`${message.user.username}, I cannot find a ${config.moderation.log} channel`);
   if (!muteRole) return message.send(`${message.user.username}, I cannot find a mute role`);
   if (reason.length < 1) return message.send(`${message.user.username}, You must supply a reason for the mute`);

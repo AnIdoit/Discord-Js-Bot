@@ -12,6 +12,7 @@
   "moderation": {
     "adminrole": "SERVER_ADMIN_ROLE",
     "modrole": "SERVER_MOD_ROLE",
+    "muterole": "SERVER_MUTE_ROLE",
     "logs": "SERVER_LOGS"
   },
 
