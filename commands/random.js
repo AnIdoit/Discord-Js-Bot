@@ -11,7 +11,13 @@ exports.run = (client, message, args) => {
     let Random = arrayNum[Math.floor(Math.random() * arrayNum.length)];
 
     message.channel.send(Random);
-  } else {
+  } else
+  if(message.content.startsWith(config.bot.prefix + random number)) {
+    let arrayNum = ['Hello Human', 'Kindly Die', 'you must construct additional pylons!', 'Oh nose, No phrase found'];
+    let Random = arrayNum[Math.floor(Math.random() * arrayNum.length)];
+
+    message.channel.send(Random);
+  }else {
     message.channel.send(`${message.user.username}, random number or random letter...`)
   }
 };
