@@ -18,6 +18,6 @@ exports.run = (client, message, args) => {
 
     message.channel.send(Random);
   }else {
-    message.channel.send(`${message.user.username}, random number or random letter...`)
+    message.channel.send(`${message.user.username}, random number, random letter or random phrase...`)
   }
 };
