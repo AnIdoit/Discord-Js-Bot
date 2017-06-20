@@ -21,6 +21,6 @@ The Discord bot I'm writing in JavaScript(Discord.js)
   - less useful
     - ping
 ### Owner Server's
-<a href="https://discord.gg/XYySGKz"><img src="https://discordapp.com/api/guilds/324962753171161108/widget.png?style=banner2" alt="Discord server"></a>
+<a href="https://discord.gg/XYySGKz"><img src="https://discordapp.com/api/guilds/324962753171161108/widget.png?style=banner3" alt="Discord server"></a>
 
-<a href="https://discord.gg/AyGxw76"><img src="https://discordapp.com/api/guilds/326513632123027456/widget.png?style=banner2" alt="Discord server"></a>
+<a href="https://discord.gg/AyGxw76"><img src="https://discordapp.com/api/guilds/326513632123027456/widget.png?style=banner3" alt="Discord server"></a>
