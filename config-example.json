@@ -1,12 +1,12 @@
 {
   "bot": {
     "token": "YOUR_BOT_TOKEN",
-    "prefix": "PREFIX",
+    "prefix": "PREFIX"
   },
 
   "owner": {
     "username": "YOUR_USERNAME",
-    "userid": "YOUR_ID",
+    "userid": "YOUR_ID"
   },
 
   "moderation": {
@@ -18,6 +18,6 @@
 
   "join": {
     "role": "ROLE_GIVEN_ON_JOIN",
-    "channel" : "CHANNEL_TO_MESSAGE_ON_JOIN",
+    "channel" : "CHANNEL_TO_MESSAGE_ON_JOIN"
   }
 }
