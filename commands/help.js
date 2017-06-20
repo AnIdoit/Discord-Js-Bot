@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     .setColor(0x00AE86)
     .setFooter(`Bot by: ${config.owner.username}`)
     .setThumbnail(client.user.avatarURL)
-    .addField('----Normal User----', 'ping - responds pong\nguildinfo - info on current guild \n')
+    .addField('----Normal User----', 'ping - responds pong\nguildinfo - info on current guild \nrandom - shows random (number/letter/phrase) \n')
     .addField('----Mod----', 'kick - kicks mentioned user \n')
     .addField('----Admin----', 'ban - bans mentioned user\n');
 
